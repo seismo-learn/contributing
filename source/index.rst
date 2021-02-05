@@ -5,6 +5,7 @@
    :maxdepth: 3
    :hidden:
 
+   building
    general-guidelines
    restructuredtext
 
