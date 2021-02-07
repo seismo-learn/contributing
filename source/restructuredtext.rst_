@@ -44,10 +44,6 @@
 使用 ``wc /etc/passwd`` 查看密码设置
 
 
-
-
-
-
 链接
 -----
 
@@ -73,7 +69,6 @@ https://seismo-learn.org/seismology101
 
 
 同文档内的标题： `reStructuredText 备忘单`_ 、`格式化文字`_
-
 
 
 列表
@@ -142,7 +137,6 @@ https://seismo-learn.org/seismology101
    $ echo "Hello World"
 
 
-
 表格
 -----
 
@@ -206,3 +200,59 @@ https://seismo-learn.org/seismology101
 .. math::
 
    \gamma = \sqrt{(\alpha^2 + \beta^2)}
+
+
+
+
+语义标记
+--------
+
+:kbd:`Enter`  :kbd:`Shift`
+
+
+:download:`logo.png`
+
+
+:download:`general-guidelines.rst`
+
+
+:file:`general-guidelines.rst`
+
+
+指令
+-----
+
+.. note::
+
+   本节内容适用于 **Fedora 33 Workstation**\，
+   对其他 Fedora 版本不一定适用。
+
+
+
+.. warning::
+
+   制作 USB 启动盘时会格式化 U 盘！
+   请确保 U 盘中无重要文件！
+
+
+
+
+.. tip::
+
+   1.  不同型号的电脑进入 BIOS 的方法可能不同，
+       请自行查询。
+   2.  若计算机无法从 USB 盘启动，则可能是由于
+       计算机的“安全启动”设置导致的，
+       可以尝试进入 BIOS 设置，并在
+       BIOS 设置内关闭“安全启动”。
+   3.  如果尝试多次都无法正确从 USB 启动，
+       则可能是 USB 启动盘制作失败，
+       请尝试重新制作启动盘
+
+
+
+
+.. important::
+
+   家目录 :file:`/home/seismo-learn/` 最后
+   的斜杠非常重要。
