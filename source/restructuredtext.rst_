@@ -1,25 +1,25 @@
 段落
------
+----
 
-段落是由一或多个空白行分隔的文本块。
+段落是由一个或多个空白行分隔的文本块。
 
 同一段落的所有行都必须
 左对齐到相同的缩进级别。
 
 
 标题
------
+----
 
 在标题下加标点符号便可以创建标题，
 标点符号至少要和标题一样长，如上标题。
 
 子标题
-^^^^^^^
+^^^^^^
 
 子标题下的段落。
 
 子子标题
-"""""""""
+""""""""
 
 有些编辑器显示的标题和标点符号长度可能不准确，
 不确定的时候可以使用 vim 编辑器检查。
@@ -35,40 +35,38 @@
 格式化文字
 ----------
 
-使用 **粗体** 标记
-
-
-使用 *斜体* 标记
-
-
-使用 ``wc /etc/passwd`` 查看密码设置
+在书写文字时可以使用 **粗体** 标记、
+*斜体* 标记，以及行内代码（如 ``wc /etc/passwd``）
 
 
 链接
 -----
 
-
 外部链接
 ^^^^^^^^
 
-seismo-learn@163.com
+邮箱：seismo-learn@163.com
 
-https://seismo-learn.org/seismology101
+网址链接：https://seismo-learn.org/seismology101
 
 
-`地震“学”主站 <https://seismo-learn.org/>`__
+带超链接的文字：`地震“学”主站 <https://seismo-learn.org/>`__
 
 
 内部链接
-^^^^^^^^^
+^^^^^^^^
 
-链接文档位于同一目录： :doc:`general-guidelines`
+链接当前目录下的某文档： :doc:`general-guidelines`
+
+使用绝对路径链接任一文档（``source`` 为根目录）：
+:doc:`/general-guidelines`
 
 
-使用绝对路径（source 目录是根目录）： :doc:`/general-guidelines`
+链接当前文档内的某标题： `格式化文字`_
 
 
-同文档内的标题： `reStructuredText 备忘单`_ 、`格式化文字`_
+默认使用该文档的标题作为链接的文字，也可以自行指定链接文字：
+:doc:`指向《维护指南》的链接 <general-guidelines>`
 
 
 列表
@@ -91,7 +89,6 @@ https://seismo-learn.org/seismology101
 
 
 
-
 **术语定义列表：**
 
 地震“学”
@@ -105,7 +102,6 @@ https://seismo-learn.org/seismology101
     地震“学”小组撰写的《地震“学”科研入门教程》
     主要目的是帮助地震学新手快速入门，
     以尽快开展实际的科研工作。
-
 
 
 
@@ -136,7 +132,6 @@ https://seismo-learn.org/seismology101
    # 使用 echo（回声）命令输出 Hello World!
    $ echo "Hello World"
 
-
 表格
 -----
 
@@ -154,11 +149,10 @@ https://seismo-learn.org/seismology101
 
 
 
-
 图片
 ----
 
-利用 ``figure`` 插入图片：
+利用 ``figure`` 指令插入图片：
 
 .. figure:: logo.png
    :alt: 地震“学” logo
@@ -167,10 +161,11 @@ https://seismo-learn.org/seismology101
 
    地震“学” logo
 
+
+
+
 图片若不在同一目录下，可以使用绝对路径。
 根目录是 :file:`source` 目录，如 :file:`/logo.png`。
-
-
 
 
 
@@ -178,30 +173,31 @@ https://seismo-learn.org/seismology101
 数学公式
 ---------
 
-勾股定理 :math:`a^2+b^2=c^2` 是平面几何的一个基本定理。
+可以使用 LaTeX 语法输入公式。
 
-单独成行的公式：
+行内公式：勾股定理 :math:`a^2+b^2=c^2`
+
+
+行间公式：
 
 .. math::
 
    \gamma = \sqrt{(\alpha^2 + \beta^2)}
 
 
-
-
 语义标记
 --------
 
-:kbd:`Enter`  :kbd:`Shift`
+按键： :kbd:`Enter`  :kbd:`Shift`
 
 
-:download:`logo.png`
+图片下载：:download:`logo.png`
 
 
-:download:`general-guidelines.rst`
+文件下载：:download:`general-guidelines.rst`
 
 
-:file:`general-guidelines.rst`
+文件：:file:`general-guidelines.rst`
 
 
 指令
@@ -209,35 +205,32 @@ https://seismo-learn.org/seismology101
 
 .. note::
 
-   本节内容适用于 **Fedora 33 Workstation**\，
-   对其他 Fedora 版本不一定适用。
-
+   ``note`` 指令用于插入一个注解。
 
 
 .. warning::
 
-   制作 USB 启动盘时会格式化 U 盘！
-   请确保 U 盘中无重要文件！
-
-
-
-
-.. tip::
-
-   1.  不同型号的电脑进入 BIOS 的方法可能不同，
-       请自行查询。
-   2.  若计算机无法从 USB 盘启动，则可能是由于
-       计算机的“安全启动”设置导致的，
-       可以尝试进入 BIOS 设置，并在
-       BIOS 设置内关闭“安全启动”。
-   3.  如果尝试多次都无法正确从 USB 启动，
-       则可能是 USB 启动盘制作失败，
-       请尝试重新制作启动盘
-
+   ``warning`` 指令用于插入一个警告信息。
 
 
 
 .. important::
 
-   家目录 :file:`/home/seismo-learn/` 最后
-   的斜杠非常重要。
+   ``important`` 指定用于插入重要信息。
+
+
+
+.. tip::
+
+   ``tip`` 指令用于插入“小技巧”。
+
+   除了以上提到的指令外，还有 ``attention``、``caution``、
+   ``danger``、``error`` 和 ``hint``。其用法相同。
+
+
+
+
+
+.. admonition:: 自定义信息
+
+   ``admonition`` 可以用于插入自定义信息。
