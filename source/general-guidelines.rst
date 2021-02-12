@@ -51,7 +51,7 @@
 文件风格
 ^^^^^^^^
 
-1.  所有文档均采用 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`__
+1.  所有文档均采用 `reStructuredText <https://docutils.sourceforge.io/rst.html>`__
     语言编写。可参考 :doc:`restructuredtext` 学习其常用语法。
 2.  一级标题、二级标题和三级标题，分别用 ``=``、``-`` 和 ``^`` 符号标识
 3.  所有 Bash 命令前应加上 shell 提示符 ``$`` 以表示该命令为 shell 命令
