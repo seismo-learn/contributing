@@ -7,6 +7,7 @@
 
    building
    general-guidelines
+   pull-request
    restructuredtext
 
 
