@@ -142,7 +142,7 @@ Pull Request 流程
         $ cd ~/Downloads/seismology101/
 
         # 添加官方仓库作为另一个远程 upstream
-        $ git remote add origin git@github.com:seismo-learn/seismology101.git
+        $ git remote add upstream git@github.com:seismo-learn/seismology101.git
 
 .. note::
 
