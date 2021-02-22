@@ -8,7 +8,7 @@
    :container: + shadow
    :title: bg-info text-white font-weight-bold 
 
-    以下步骤中，下载文档源码需要版本控制工具 git，安装 Sphinx 和文档所需依赖需要已安装 Python。
+    以下步骤假定用户已安装版本控制工具 git 和 Python。
 
     若未安装 git，可以使用以下命令安装或更新 git：
 
