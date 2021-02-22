@@ -9,6 +9,12 @@ Pull Request 流程
 如果已存在与您想做的修改相关的 Issue，请直接在该 Issue 下直接留言，以让我们知道您打算做什么。
 相关修改经过讨论确认需要执行后，可选择\ `线下修改并提交`_\ 。
 
+.. note::
+
+   地震“学”所有文档源码都开源托管在 `GitHub <https://github.com/>`__ 上，因此读者需要
+   一个 GitHub 账户才能提交 PR。可以参考 http://www.worldhello.net/gotgithub/02-join-github/010-account-setup.html，
+   注册帐号。
+
 注意事项
 ---------
 
@@ -23,8 +29,6 @@ Pull Request 流程
 
 在线修改并提交
 ---------------
-
-读者需要一个 GitHub 账户。可以参考 http://www.worldhello.net/gotgithub/02-join-github/010-account-setup.html，注册帐号。
 
 1.  在线修改
 
@@ -43,41 +47,46 @@ Pull Request 流程
 线下修改并提交
 --------------
 
-准备工作
-^^^^^^^^
+.. note:: 
 
-1.  注册 GitHub 账户
+   推荐设置并使用 SSH 秘钥在本地计算机和 GitHub 仓库之间的进行传输。
+   
+   若未设置 SSH 秘钥，则需要修改以下步骤中的远程仓库地址：
 
-    地震“学”所有文档源码都开源托管在 `GitHub <https://github.com/>`__ 上，因此读者需要注册一个 GitHub 账户。
-    
-    可以参考 http://www.worldhello.net/gotgithub/02-join-github/010-account-setup.html，注册帐号。
-    
-    推荐设置并使用 SSH 秘钥在本地计算机和 GitHub 仓库之间的进行传输。若未设置，则需要修改以下步骤中的远程仓库地址：
+   - git@github.com:seismology-freshman/seismology101.git 替换为 https://github.com/seismology-freshman/seismology101.git
+   - git@github.com:seismo-learn/seismology101.git 替换为 https://github.com/seismo-learn/seismology101.git
 
-    - git@github.com:seismology-freshman/seismology101.git 替换为 https://github.com/seismology-freshman/seismology101.git
-    - git@github.com:seismo-learn/seismology101.git 替换为 https://github.com/seismo-learn/seismology101.git
+.. dropdown:: :fa:`exclamation-circle,mr-1` 安装 git
+   :container: + shadow
+   :title: bg-info text-white font-weight-bold 
 
-2.  安装版本控制工具 git
-
-    地震“学”所有文档均使用 `git <https://git-scm.com/>`__ 进行版本控制。使用以下命令安装或更新 git：
+    地震“学”所有文档均使用 `git <https://git-scm.com/>`__ 进行版本控制。以下步骤假定
+    用户已安装 git。若未安装，可以使用以下命令安装或更新 git：
 
     .. include:: install-git.rst_
 
-    以下文档修改并提交步骤中使用了 git 的一些常用选项，可以参考以下资料学习更多用法：
+.. dropdown:: :fa:`exclamation-circle,mr-1` git 学习资料
+   :container: + shadow
+   :title: bg-info text-white font-weight-bold 
 
-    - `git 简明指南 <http://rogerdudler.github.io/git-guide/index.zh.html>`__
-    - `GotGitHub <http://www.worldhello.net/gotgithub/index.html>`__
-    - `廖雪峰的 Git 教程 <http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000>`__
-    - `Pro Git <https://git-scm.com/book/zh/>`__
+   以下修改文档并提交的步骤中使用了 git 的一些常用选项，可以参考以下资料学习更多用法：
 
-3.  安装 Python、Sphinx 以及文档所需依赖包
+   - `git 简明指南 <http://rogerdudler.github.io/git-guide/index.zh.html>`__
+   - `GotGitHub <http://www.worldhello.net/gotgithub/index.html>`__
+   - `廖雪峰的 Git 教程 <http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000>`__
+   - `Pro Git <https://git-scm.com/book/zh/>`__
 
-    地震“学”的所有文档均使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__ 构建。因此，若想要在本地构建文档并检查修改效果，
-    需要安装 Python、Sphinx 以及文档所需依赖包。
+.. dropdown:: :fa:`exclamation-circle,mr-1` 安装 Python、Sphinx 以及文档所需依赖包
+   :container: + shadow
+   :title: bg-info text-white font-weight-bold 
 
-    若未安装 Python，建议通过 :doc:`Anaconda <software:anaconda/index>`  来安装和管理 Python。强烈建议不要使用系统自带的 Python。
+    地震“学”的所有文档均使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__
+    构建。因此，若想要在本地构建文档并检查修改效果，需要安装 Python、Sphinx 以及文档
+    所需依赖包：
 
-    参考\ :doc:`building`\ ，安装 Sphinx 和文档所需依赖包。
+    - 建议通过 :doc:`Anaconda <software:anaconda/index>` 来安装和管理 Python。
+      强烈建议不要使用系统自带的 Python。
+    - 参考\ :doc:`building`\ ，安装 Sphinx 和文档所需依赖包。
 
 克隆和复制仓库
 ^^^^^^^^^^^^^^
@@ -89,7 +98,7 @@ Pull Request 流程
     以下步骤以\ `地震“学”科研入门教程 <https://seismo-learn.org/seismology101/>`__\ 为例，修改其他文档时做简单替换即可：
 
     - 修改文档\ `地震“学”软件 <https://seismo-learn.org/software/>`__\ : 将 ``seismology101`` 改成 ``software``
-    - 修改文档\ `地震“学”基础 <https://seismo-learn.org/software/>`__\ : 将 ``seismology101`` 改成 ``seismology``
+    - 修改文档\ `地震“学”参考书 <https://seismo-learn.org/seismology/>`__\ : 将 ``seismology101`` 改成 ``seismology``
 
 1.  复制仓库至个人 GitHub 帐号
 
