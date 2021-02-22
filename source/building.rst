@@ -22,7 +22,7 @@
     构建其他文档时只需做简单替换即可：
 
     - 构建文档\ `地震“学”软件 <https://seismo-learn.org/software/>`__: 将 ``seismology101`` 改成 ``software``
-    - 构建文档\ `地震“学”基础 <https://seismo-learn.org/software/>`__: 将 ``seismology101`` 改成 ``seismology``
+    - 构建文档\ `地震“学”参考书 <https://seismo-learn.org/seismology/>`__: 将 ``seismology101`` 改成 ``seismology``
 
 1.  下载文档源码
 
