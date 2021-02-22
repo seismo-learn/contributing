@@ -61,43 +61,7 @@ Pull Request 流程
 
     地震“学”所有文档均使用 `git <https://git-scm.com/>`__ 进行版本控制。使用以下命令安装或更新 git：
 
-<<<<<<< HEAD
     .. include:: install-git.rst_
-=======
-    .. tabbed:: Fedora
-
-        ::
-
-            $ sudo dnf install git
-
-    .. tabbed:: CentOS
-
-        ::
-
-            $ sudo yum install git
-
-    .. tabbed:: Ubuntu/Debian
-
-        ::
-
-            $ sudo apt install git
-
-    .. tabbed:: macOS
-
-        ::
-
-            $ brew install git
-
-    .. tabbed:: Windows
-
-        打开 https://git-scm.com/downloads，下载并安装 Git for Windows。
-
-    安装完成后，还需设置个人信息。打开终端，运行以下命令（替换 Your Name 和 youremail@example.com，
-    例如 “seismo-learn” 和 “seismo-learn@gmail.com”）::
-
-        $ git config --global user.name "Your Name"
-        $ git config --global user.email "youremail@example.com"
->>>>>>> 7fbe35dbced1f19b8aefe9bde04edec6929c4141
 
     以下文档修改并提交步骤中使用了 git 的一些常用选项，可以参考以下资料学习更多用法：
 
@@ -108,17 +72,10 @@ Pull Request 流程
 
 3.  安装 Python、Sphinx 以及文档所需依赖包
 
-<<<<<<< HEAD
     地震“学”的所有文档均使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__ 构建。因此，若想要在本地构建文档并检查修改效果，
     需要安装 Python、Sphinx 以及文档所需依赖包。
 
     若未安装 Python，建议通过 :doc:`Anaconda <software:anaconda/index>`  来安装和管理 Python。强烈建议不要使用系统自带的 Python。
-=======
-    地震“学”所有文档均使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__ 构建。因此，若想要在本地构建文档并检查修改效果，
-    需要安装 Python、Sphinx 以及文档所需依赖包。
-
-    强烈建议不要使用系统自带的 Python，而建议通过 :doc:`Anaconda <software:anaconda/index>`  来安装和管理 Python。
->>>>>>> 7fbe35dbced1f19b8aefe9bde04edec6929c4141
 
     参考\ :doc:`building`\ ，安装 Sphinx 和文档所需依赖包。
 
