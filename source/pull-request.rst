@@ -187,13 +187,6 @@ Pull Request 流程
            # 将 pr-workflow 分支基于最新的 main 分支
            $ git rebase main
 
-.. note::
-
-   分支开发的过程中，可能会有很多次 commit，某些 commit 可能不那么重要。可以将多个 commit
-   压缩成一个或若干个 commit，这样不仅清晰，也容易管理::
-
-       $ git rebase -i main
-
 提交 PR
 ^^^^^^^^
 
