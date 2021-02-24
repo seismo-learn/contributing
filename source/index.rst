@@ -9,6 +9,7 @@
    general-guidelines
    pull-request
    restructuredtext
+   sphinx-extensions
 
 
 .. warning::
