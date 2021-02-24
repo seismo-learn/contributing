@@ -52,10 +52,6 @@ tabbed 指令
 
 .. include:: sphinx-panels-tabbed.rst_
 
-.. raw:: html
-
-   </div>
-
 panels 指令
 ^^^^^^^^^^^^
 
@@ -74,10 +70,6 @@ panels 指令
    <div style="float: left; width:98%">
 
 .. include:: sphinx-panels-panels.rst_
-
-.. raw:: html
-
-   </div>
 
 简要介绍该指令中使用的一些参数。container 参数：
 
