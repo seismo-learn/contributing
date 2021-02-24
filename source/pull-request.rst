@@ -198,15 +198,15 @@ Pull Request 流程
 
     进入个人 GitHub 帐号下的复制仓库（即 https://github.com/seismology-freshman/seismology101）。
     一般 GitHub 会自动提示有可提交的 PR，点击 “Compare & pull request”，输入此 PR 的标题和具体描述，
-    选择 Reviewers。最后点击 “Create pull request” 即可。
+    最后点击 “Create pull request” 即可。
 
 3.  审核、评论以及修改 PR
 
     地震“学”维护者收到 PR 后，会对代码进行审核、评论以及修改，并决定是否接受或结束该 PR。
 
-    提交的 PR 在接收前可能需要读者多次修改。这种情况并不要创建新 PR，只需继续本地 pr-workflow 分支中修改并提交，
-    然后再次推送 pr-workflow 分支至远程 origin 即可，修改将自动添加到已提交的 PR 中。
-    推送新的修改后，可以选择在该 PR 中留言或再次请求 Reviewers，来通知 Reviewers 已提交新的修改。
+    提交的 PR 在接收前可能需要读者多次修改。这种情况并不要创建新 PR，只需继续本地 pr-workflow 分支中
+    修改并提交，然后再次推送 pr-workflow 分支至远程 origin 即可，修改将自动添加到已提交的 PR 中。
+    推送新的修改后，可以选择在该 PR 中留言，以通知维护者已提交新的修改。
 
 4.  PR 被接受并合并至官方 main 分支后，则可以更新 main 分支，并删除 pr-workflow 分支
 
