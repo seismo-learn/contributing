@@ -27,10 +27,6 @@ tabbed 指令
 
 使用 ``tabbed`` 指令可以使文档内容以选项卡的形式显示。例如，不同操作系统下安装 git：
 
-.. raw:: html
-
-   <div style="float: left; width:98%">
-
 .. literalinclude:: sphinx-panels-tabbed.rst_
 
 以上内容的显示效果：
