@@ -15,23 +15,12 @@ sphinx-panels
 dropdown 指令
 ^^^^^^^^^^^^^^
 
-.. raw:: html
-
-   <div style="float: left; width:98%">
-
 .. literalinclude:: sphinx-panels-dropdown.rst_
 
 以上内容的显示效果：
 
-.. raw:: html
-
-   <div style="float: left; width:98%">
-
 .. include:: sphinx-panels-dropdown.rst_
 
-.. raw:: html
-
-   </div>
 
 tabbed 指令
 ^^^^^^^^^^^^^
@@ -46,10 +35,6 @@ tabbed 指令
 
 以上内容的显示效果：
 
-.. raw:: html
-
-   <div style="float: left; width:98%">
-
 .. include:: sphinx-panels-tabbed.rst_
 
 panels 指令
@@ -57,17 +42,9 @@ panels 指令
 
 使用 ``panels`` 指令可以使文档内容以网格布局的形式显示。例如，使用卡片布局（card layout）：
 
-.. raw:: html
-
-   <div style="float: left; width:98%">
-
 .. literalinclude:: sphinx-panels-panels.rst_
 
 以上布局的显示效果：
-
-.. raw:: html
-
-   <div style="float: left; width:98%">
 
 .. include:: sphinx-panels-panels.rst_
 
