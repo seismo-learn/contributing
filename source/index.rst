@@ -10,6 +10,7 @@
    pull-request
    restructuredtext
    sphinx-extensions
+   repositories
 
 
 .. warning::
