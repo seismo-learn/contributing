@@ -10,6 +10,7 @@
    pull-request
    restructuredtext
    sphinx-extensions
+   maintainer-notes
    repositories
 
 
