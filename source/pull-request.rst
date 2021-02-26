@@ -65,7 +65,7 @@ Pull Request 流程
 
     .. include:: install-git.rst_
 
-.. dropdown:: :fa:`exclamation-circle,mr-1` git 学习资料
+.. dropdown:: :fa:`exclamation-circle,mr-1` git 和 GitHub 学习资料
    :container: + shadow
    :title: bg-info text-white font-weight-bold 
 
@@ -75,6 +75,11 @@ Pull Request 流程
    - `GotGitHub <http://www.worldhello.net/gotgithub/index.html>`__
    - `廖雪峰的 Git 教程 <http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000>`__
    - `Pro Git <https://git-scm.com/book/zh/>`__
+
+   GitHub 相关资料：
+
+   - `GitHub 中文文档 <https://docs.github.com/cn/github>`__ 
+   - `Understanding the GitHub flow <https://guides.github.com/introduction/flow/>`__
 
 .. dropdown:: :fa:`exclamation-circle,mr-1` 安装 Python、Sphinx 以及文档所需依赖包
    :container: + shadow
