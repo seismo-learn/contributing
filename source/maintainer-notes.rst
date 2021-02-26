@@ -8,7 +8,7 @@
 
 新建文档时，可以直接复制已存在文档的配置和相关目录及文件（如\ `地震“学”科研入门教程 <https://github.com/seismo-learn/seismology101>`__\ ），
 并做进一步修改。例如，\ :file:`Makefile`\ 、\ :file:`make.bat`\ 、
-:file:`requirements.txt`\ 、\ :file:`source/conf.py`\ 、\ :file:`/source/_static/`\ 、
+:file:`requirements.txt`\ 、\ :file:`source/conf.py`\ 、\ :file:`source/_static/`\ 、
 :file:`source/_templates/`\ 、\ :file:`source/index.rst`\ 、:file:`.gitignore`\ 、
 :file:`.github/`\ 、\ :file:`README.md` 等。
 
