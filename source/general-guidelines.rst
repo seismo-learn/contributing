@@ -18,7 +18,7 @@
 
 1. 修改文档源码并提交 Pull Request（不熟悉 Pull Request 的读者可以参考 :doc:`pull-request`\ ）
 2. 在 GitHub 上的文档源码仓库下提交 Issue
-3. 在 GitHub 上的文档源码仓库下的 Discussions 上留言（也可以直接点击文档网页的左下角的“参与讨论”）
+3. 在 GitHub 上的文档源码仓库下的 Discussions 上留言（也可以直接点击文档网页左下角的“参与讨论”）
 
 分支模型
 --------
