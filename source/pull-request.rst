@@ -175,7 +175,8 @@ Pull Request 流程
 
 .. note::
 
-   开发 pr-workflow 分支的过程中，官方 main 分支可能已经更新。因此，需要经常同步最新版的官方 main 分支。
+   开发 pr-workflow 分支的过程中，官方 main 分支可能已经更新。可以经常同步最新版的官方
+   main 分支，也可以定期同步。
 
    1.  同步本地和官方 main 分支::
 
@@ -189,13 +190,30 @@ Pull Request 流程
 
            $ git push origin main
 
-   3.  将 pr-workflow 分支基于最新的 main 分支::
+   提交 PR 后，一般会收到评论和修改建议，有些修改建议可能直接在远程（origin）pr-worflow
+   分支中就接收了。有时，还会在 PR 中选择同步最新版的官方 main 分支到远程的 pr-worflow
+   分支。这两种情况下，我们都需要同步修改过的远程 pr-worflow 分支和本地 pr-worflow 分支::
 
-           # 切换到 pr-workflow 分支
-           $ git checkout pr-workflow
+       # 切换到 pr-workflow 分支
+       $ git checkout pr-workflow
 
-           # 将 pr-workflow 分支基于最新的 main 分支
-           $ git rebase main
+       # 获取远程 pr-workflow 分支，并合并到本地 pr-workflow 分支
+       $ git pull origin pr-workflow
+
+   本地 main 分支和 pr-worflow 分支一般不需要同步。如果确实需要同步时，请确保自己有足够
+   的能力和精力解决可能的冲突。
+
+.. note::
+
+   有时候，我们需要复制一些 commit 到某分支，推荐使用 ``git cherry-pick`` 命令。可以
+   参考 `git cherry-pick 教程 <https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html>`__
+   学习其基本用法。
+
+   除了 ``git merge`` 命令外，``git rebase`` 命令也可以用来整合来自不同分支的修改，
+   它比 ``git cherry-pick`` 命令更强大。但是变基（rebase）会修改提交历史，因此你首先
+   需要了解该命令的详细用法，知道自己在做啥。可以参考\ `变基 <https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA>`__
+   学习其基本用法。总的原则是，**只对尚未推送给别人的本地修改执行变基操作清理历史，从不对
+   已推送至别处的提交执行变基操作**\ 。
 
 提交 PR
 ^^^^^^^^
