@@ -1,0 +1,690 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>reStructuredText 备忘单 &mdash; 地震“学”贡献指南</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="Sphinx 扩展" href="../sphinx-extensions/" />
+    <link rel="prev" title="Pull Request 流程" href="../pull-request/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> 地震“学”贡献指南
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general-guidelines/">维护指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">构建网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pull-request/">Pull Request 流程</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">reStructuredText 备忘单</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">段落</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">标题</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">子标题</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">子子标题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">格式化文字</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">链接</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">外部链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">内部链接</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">图片</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">数学公式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">语义标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">指令</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx-extensions/">Sphinx 扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainer-notes/">维护者备忘单</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../repositories/">仓库列表</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/"><i class="fa fa-home"></i> 地震“学”主站</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/contributing"><i class="fa fa-github fa-fw"></i> 网站源码</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/contributing/discussions"><i class="fa fa-comments fa-fw"></i> 参与讨论</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">地震“学”贡献指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>reStructuredText 备忘单</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/seismo-learn/contributing/blob/main/source/restructuredtext.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="restructuredtext">
+<h1>reStructuredText 备忘单<a class="headerlink" href="#restructuredtext" title="永久链接至标题">¶</a></h1>
+<p>地震“学”所有文档均采用 <a class="reference external" href="https://docutils.sourceforge.io/rst.html">reStructuredText</a>
+（ReST）标记语言编写。我们总结了编写地震“学”文档时所使用的一些 ReST 常用语法，更完整的 ReST 语法说明请参考
+<a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">Sphinx 官方文档</a>。如果要预览 ReST 编写的文档，可尝试 ReST 在线编辑器，如 <a class="reference external" href="http://rst.ninjs.org/">http://rst.ninjs.org/</a>。</p>
+<p>下面的内容中，右侧为原始 ReST 标记语言写的文件源码，左侧为渲染后实际网页中显示的效果。</p>
+<div style="float: left; width:49%"><div class="section" id="id1">
+<h2>段落<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>段落是由一个或多个空白行分隔的文本块。</p>
+<p>同一段落的所有行都必须左对齐到相同的缩进级别。</p>
+</div>
+<div class="section" id="id2">
+<h2>标题<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在标题下加标点符号便可以创建标题，标点符号至少要和标题一样长，如上标题。</p>
+<div class="section" id="id3">
+<h3>子标题<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>子标题下的段落。</p>
+<div class="section" id="id4">
+<h4>子子标题<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<p>有些编辑器显示的标题和标点符号长度可能不准确，不确定的时候可以使用 vim 编辑器检查。</p>
+<p>标题级别与使用的标点符号无关，建议编写文档时使用统一的标点符号来确定标题级别。</p>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>格式化文字<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>在书写文字时可以使用 <strong>粗体</strong> 标记、
+<em>斜体</em> 标记，以及行内代码（如 <code class="docutils literal notranslate"><span class="pre">wc</span> <span class="pre">/etc/passwd</span></code>）</p>
+</div>
+<div class="section" id="id6">
+<h2>链接<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id7">
+<h3>外部链接<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>邮箱：<a class="reference external" href="mailto:seismo-learn&#37;&#52;&#48;163&#46;com">seismo-learn<span>&#64;</span>163<span>&#46;</span>com</a></p>
+<p>网址链接：<a class="reference external" href="https://seismo-learn.org/seismology101">https://seismo-learn.org/seismology101</a></p>
+<p>带超链接的文字：<a class="reference external" href="https://seismo-learn.org/">地震“学”主站</a></p>
+</div>
+<div class="section" id="id8">
+<h3>内部链接<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>链接当前目录下的某文档： <a class="reference internal" href="../general-guidelines/"><span class="doc">维护指南</span></a></p>
+<p>用绝对路径链接任一文档，<code class="file docutils literal notranslate"><span class="pre">source</span></code> 目录是根目录：
+<a class="reference internal" href="../general-guidelines/"><span class="doc">维护指南</span></a></p>
+<p>链接当前文档内的某标题： <a class="reference internal" href="#id5">格式化文字</a></p>
+<p>默认使用该文档的标题作为链接的文字，也可以自行指定链接文字：
+<a class="reference internal" href="../general-guidelines/"><span class="doc">指向《维护指南》的链接</span></a></p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>列表<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>无序列表：</p>
+<ul class="simple">
+<li><p>地震“学”软件</p></li>
+<li><p>地震“学”科研入门教程</p></li>
+<li><p>地震“学”参考书</p></li>
+</ul>
+<p>有序列表：</p>
+<ol class="arabic simple">
+<li><p>地震“学”软件</p></li>
+<li><p>地震“学”科研入门教程</p></li>
+<li><p>地震“学”参考书</p></li>
+</ol>
+<p>术语定义列表：</p>
+<dl>
+<dt>地震“学”</dt><dd><p>地震“学”是一群地震学的搬砖工成立的团队。</p>
+<p>核心目标是提供地震学科研入门培训材料、整理和维护地震学学习资料、促进地震学中文社区的交流和发展。</p>
+</dd>
+<dt>地震“学”科研入门教程</dt><dd><p>地震“学”小组撰写的《地震“学”科研入门教程》主要目的是帮助地震学新手快速入门，以尽快开展实际的科研工作。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id10">
+<h2>代码<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>使用 echo 命令输入字符：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 使用 echo（回声）命令输出 Hello World!
+$ echo &quot;Hello World&quot;
+</pre></div>
+</div>
+<p>使用 echo 命令输入字符:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 使用 echo（回声）命令输出 Hello World!
+$ echo &quot;Hello World&quot;
+</pre></div>
+</div>
+<p>使用 echo 命令输入字符：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 使用 echo（回声）命令输出 Hello World!</span>
+$ <span class="nb">echo</span> <span class="s2">&quot;Hello World&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>表格<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center" id="id16">
+<caption><span class="caption-text">近几年的 macOS 系统版本号</span><a class="headerlink" href="#id16" title="永久链接至表格">¶</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>版本号</p></th>
+<th class="head"><p>代号</p></th>
+<th class="head"><p>发布日期</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>macOS 10.13</p></td>
+<td><p>High Sierra</p></td>
+<td><p>2017 年 9 月</p></td>
+</tr>
+<tr class="row-odd"><td><p>macOS 10.14</p></td>
+<td><p>Mojave</p></td>
+<td><p>2018 年 9 月</p></td>
+</tr>
+<tr class="row-even"><td><p>macOS 10.15</p></td>
+<td><p>Catalina</p></td>
+<td><p>2019 年 10 月</p></td>
+</tr>
+<tr class="row-odd"><td><p>macOS 11</p></td>
+<td><p>Big Sur</p></td>
+<td><p>2020 年 9 月</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id12">
+<h2>图片<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<p>利用 <code class="docutils literal notranslate"><span class="pre">figure</span></code> 指令插入图片：</p>
+<div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="../_images/logo.png"><img alt="地震“学” logo" src="../_images/logo.png" style="width: 25.0%;" /></a>
+<p class="caption"><span class="caption-text">地震“学” logo</span><a class="headerlink" href="#id17" title="永久链接至图片">¶</a></p>
+</div>
+<p>图片若不在同一目录下，可以使用绝对路径。根目录是 <code class="file docutils literal notranslate"><span class="pre">source</span></code> 目录，如 <code class="file docutils literal notranslate"><span class="pre">/logo.png</span></code>。</p>
+</div>
+<div class="section" id="id13">
+<h2>数学公式<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>可以使用 LaTeX 语法输入公式。</p>
+<p>行内公式：勾股定理 <span class="math notranslate nohighlight">\(a^2+b^2=c^2\)</span></p>
+<p>行间公式：</p>
+<div class="math notranslate nohighlight">
+\[\gamma = \sqrt{(\alpha^2 + \beta^2)}\]</div>
+</div>
+<div class="section" id="id14">
+<h2>语义标记<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>按键： <kbd class="kbd docutils literal notranslate">Enter</kbd>  <kbd class="kbd docutils literal notranslate">Shift</kbd></p>
+<p>图片下载：<a class="reference download internal" download="" href="../_downloads/1bb87d41d15fe27b500a4bfcde01bb0e/logo.png"><code class="xref download docutils literal notranslate"><span class="pre">logo.png</span></code></a></p>
+<p>文件下载：<a class="reference download internal" download="" href="../_downloads/9264be96b513b986e6cff4746c0e56fb/general-guidelines.rst"><code class="xref download docutils literal notranslate"><span class="pre">general-guidelines.rst</span></code></a></p>
+<p>文件：<code class="file docutils literal notranslate"><span class="pre">general-guidelines.rst</span></code></p>
+</div>
+<div class="section" id="id15">
+<h2>指令<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><code class="docutils literal notranslate"><span class="pre">note</span></code> 指令用于插入一个注解。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p><code class="docutils literal notranslate"><span class="pre">warning</span></code> 指令用于插入一个警告信息。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p><code class="docutils literal notranslate"><span class="pre">important</span></code> 指定用于插入重要信息。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p><code class="docutils literal notranslate"><span class="pre">tip</span></code> 指令用于插入“小技巧”。</p>
+<p>除了以上提到的指令外，还有 <code class="docutils literal notranslate"><span class="pre">attention</span></code>、<code class="docutils literal notranslate"><span class="pre">caution</span></code>、
+<code class="docutils literal notranslate"><span class="pre">danger</span></code>、<code class="docutils literal notranslate"><span class="pre">error</span></code> 和 <code class="docutils literal notranslate"><span class="pre">hint</span></code>。其用法相同。</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">自定义信息</p>
+<p><code class="docutils literal notranslate"><span class="pre">admonition</span></code> 可以用于插入自定义信息。</p>
+</div>
+</div>
+</div>
+<div style="float: right; width:49%"><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>段落
+----
+
+段落是由一个或多个空白行分隔的文本块。
+
+同一段落的所有行都必须
+左对齐到相同的缩进级别。
+
+
+标题
+----
+
+在标题下加标点符号便可以创建标题，
+标点符号至少要和标题一样长，如上标题。
+
+子标题
+^^^^^^
+
+子标题下的段落。
+
+子子标题
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+有些编辑器显示的标题和标点符号长度可能不准确，
+不确定的时候可以使用 vim 编辑器检查。
+
+标题级别与使用的标点符号无关，
+建议编写文档时使用统一的标点符号来确定标题级别。
+
+
+
+
+
+
+格式化文字
+----------
+
+在书写文字时可以使用 **粗体** 标记、
+*斜体* 标记，以及行内代码（如 ``wc /etc/passwd``）
+
+
+
+链接
+-----
+
+外部链接
+^^^^^^^^
+
+邮箱：seismo-learn@163.com
+
+网址链接：https://seismo-learn.org/seismology101
+
+
+带超链接的文字：`地震“学”主站 &lt;https://seismo-learn.org/&gt;`__
+
+
+
+内部链接
+^^^^^^^^
+
+链接当前目录下的某文档： :doc:`general-guidelines`
+
+用绝对路径链接任一文档，:file:`source` 目录是根目录：
+:doc:`/general-guidelines`
+
+
+链接当前文档内的某标题： `格式化文字`_
+
+
+默认使用该文档的标题作为链接的文字，也可以自行指定链接文字：
+:doc:`指向《维护指南》的链接 &lt;general-guidelines&gt;`
+
+
+
+列表
+-----
+
+无序列表：
+
+- 地震“学”软件
+- 地震“学”科研
+  入门教程
+- 地震“学”参考书
+
+
+有序列表：
+
+1. 地震“学”软件
+2. 地震“学”科研入门教程
+3. 地震“学”
+   参考书
+
+
+
+术语定义列表：
+
+地震“学”
+    地震“学”是一群地震学的搬砖工成立的团队。
+
+    核心目标是提供地震学科研入门培训材料、
+    整理和维护地震学学习资料、
+    促进地震学中文社区的交流和发展。
+
+地震“学”科研入门教程
+    地震“学”小组撰写的《地震“学”科研入门教程》
+    主要目的是帮助地震学新手快速入门，
+    以尽快开展实际的科研工作。
+
+
+
+
+
+
+代码
+-----
+
+使用 echo 命令输入字符：
+
+::
+
+    # 使用 echo（回声）命令输出 Hello World!
+    $ echo &quot;Hello World&quot;
+
+
+使用 echo 命令输入字符::
+
+    # 使用 echo（回声）命令输出 Hello World!
+    $ echo &quot;Hello World&quot;
+
+
+
+使用 echo 命令输入字符：
+
+.. code-block:: bash
+
+   # 使用 echo（回声）命令输出 Hello World!
+   $ echo &quot;Hello World&quot;
+
+
+
+表格
+-----
+
+.. table:: 近几年的 macOS 系统版本号
+   :align: center
+
+   ============= ============= ==============
+   版本号         代号           发布日期
+   ============= ============= ==============
+   macOS 10.13   High Sierra   2017 年 9 月
+   macOS 10.14   Mojave        2018 年 9 月
+   macOS 10.15   Catalina      2019 年 10 月
+   macOS 11      Big Sur       2020 年 9 月
+   ============= ============= ==============
+
+
+
+
+图片
+----
+
+利用 ``figure`` 指令插入图片：
+
+.. figure:: logo.png
+   :alt: 地震“学” logo
+   :width: 25.0%
+   :align: center
+
+   地震“学” logo
+
+
+
+
+图片若不在同一目录下，可以使用绝对路径。
+根目录是 :file:`source` 目录，如 :file:`/logo.png`。
+
+
+
+
+数学公式
+---------
+
+可以使用 LaTeX 语法输入公式。
+
+行内公式：勾股定理 :math:`a^2+b^2=c^2`
+
+
+行间公式：
+
+.. math::
+
+   \gamma = \sqrt{(\alpha^2 + \beta^2)}
+
+
+语义标记
+--------
+
+按键： :kbd:`Enter`  :kbd:`Shift`
+
+
+图片下载：:download:`logo.png`
+
+
+文件下载：:download:`general-guidelines.rst`
+
+
+文件：:file:`general-guidelines.rst`
+
+
+指令
+-----
+
+.. note::
+
+   ``note`` 指令用于插入一个注解。
+
+
+
+
+.. warning::
+
+   ``warning`` 指令用于插入一个警告信息。
+
+
+
+
+.. important::
+
+   ``important`` 指定用于插入重要信息。
+
+
+
+.. tip::
+
+   ``tip`` 指令用于插入“小技巧”。
+
+   除了以上提到的指令外，还有 ``attention``、``caution``、
+   ``danger``、``error`` 和 ``hint``。其用法相同。
+
+
+
+
+
+.. admonition:: 自定义信息
+
+   ``admonition`` 可以用于插入自定义信息。
+</pre></div>
+</div>
+</div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../sphinx-extensions/" class="btn btn-neutral float-right" title="Sphinx 扩展" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../pull-request/" class="btn btn-neutral float-left" title="Pull Request 流程" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020–2021, seismo-learn.
+      <span class="lastupdated">
+        最后更新于 2021 年 03 月 09 日.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

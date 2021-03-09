@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Pull Request 流程 &mdash; 地震“学”贡献指南</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="reStructuredText 备忘单" href="../restructuredtext/" />
+    <link rel="prev" title="构建网站" href="../building/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> 地震“学”贡献指南
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general-guidelines/">维护指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">构建网站</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pull Request 流程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">注意事项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">在线修改并提交</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">线下修改并提交</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">克隆和复制仓库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">修改文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pr">提交 PR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../restructuredtext/">reStructuredText 备忘单</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx-extensions/">Sphinx 扩展</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintainer-notes/">维护者备忘单</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../repositories/">仓库列表</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/"><i class="fa fa-home"></i> 地震“学”主站</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/contributing"><i class="fa fa-github fa-fw"></i> 网站源码</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/contributing/discussions"><i class="fa fa-comments fa-fw"></i> 参与讨论</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">地震“学”贡献指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Pull Request 流程</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/seismo-learn/contributing/blob/main/source/pull-request.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pull-request">
+<h1>Pull Request 流程<a class="headerlink" href="#pull-request" title="永久链接至标题">¶</a></h1>
+<p>本章主要介绍如何修改地震“学”文档的源码并提交 Pull Request（拉取请求，简称 PR）。</p>
+<p>若只是对文档做简单的微调，比如修改简单的别字、语句不通或不清晰的描述等，可以直接通过 GitHub <a class="reference internal" href="#id2">在线修改并提交</a>。</p>
+<p>若需要对文档做大量修改，比如新增章节、调整章节结构等，请先到源码仓库提交 Issue，由维护者一起讨论是否有必要做修改。如果已存在与您想做的修改相关的 Issue，请直接在该 Issue 下留言，以让我们知道您打算做什么。相关修改经过讨论确认需要执行后，可选择<a class="reference internal" href="#id3">线下修改并提交</a>。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>若不熟悉编写文档使用的 reStructuredText 标记语言和 Sphinx 扩展，可以参考 <a class="reference internal" href="../restructuredtext/"><span class="doc">reStructuredText 备忘单</span></a>
+和 <a class="reference internal" href="../sphinx-extensions/"><span class="doc">Sphinx 扩展</span></a>。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>地震“学”所有文档源码都开源托管在 <a class="reference external" href="https://github.com/">GitHub</a> 上，因此读者需要一个 GitHub 账户才能提交 PR。可以参考 <a class="reference external" href="http://www.worldhello.net/gotgithub/02-join-github/010-account-setup.html">http://www.worldhello.net/gotgithub/02-join-github/010-account-setup.html</a>，注册帐号。</p>
+</div>
+<div class="section" id="id1">
+<h2>注意事项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>每个 PR 应该是一个较小但内容完整的修改</p></li>
+<li><p>较大的修改应分解为多个小的修改，并分别提交 PR</p></li>
+<li><p>应提交单独的 PR 来修复错误</p></li>
+<li><p>详细描述提交的 PR 做了哪些修改以及为什么需要这些修改</p></li>
+<li><p>不要在提交的 PR 中修改与其无关的文件，如 <code class="file docutils literal notranslate"><span class="pre">.gitignore</span></code> 等</p></li>
+<li><p>commit 的注释信息应该是描述性的，可以参考 <a class="reference external" href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></p></li>
+<li><p>希望读者对审稿人/维护者的评论和意见保持开放的心态，并努力改进代码或文档</p></li>
+<li><p>新的 PR 不一定会及时审核，取决于审稿人/维护者的当时的工作时间</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>在线修改并提交<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ol class="arabic">
+<li><p>在线修改</p>
+<p>点击文档网页右上角的 “Edit on GitHub”，网页会自动跳转到文档源码文件。点击源码右上方的铅笔符号“Edit this file”，即可在线修改。此过程会自动复制（Fork）仓库至个人 GitHub 帐号中。</p>
+</li>
+<li><p>提交修改</p>
+<p>修改完后，在下方的 “Commit changes” 中输入有关此次修改的标题和具体描述。输入一个简短的新分支名字。点击 “Commit changes” 提交修改。</p>
+</li>
+<li><p>提交 PR</p>
+<p>在 “Open a pull request” 页面中，输入此 PR 的标题和具体描述。点击 “Create pull request” 即可。</p>
+</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>线下修改并提交<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>推荐设置并使用 SSH 秘钥在本地计算机和 GitHub 仓库之间进行传输。</p>
+<p>若未设置 SSH 秘钥，则需要修改以下步骤中的远程仓库地址：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:seismology-freshman/seismology101.git 替换为 <a class="reference external" href="https://github.com/seismology-freshman/seismology101.git">https://github.com/seismology-freshman/seismology101.git</a></p></li>
+<li><p><a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:seismo-learn/seismology101.git 替换为 <a class="reference external" href="https://github.com/seismo-learn/seismology101.git">https://github.com/seismo-learn/seismology101.git</a></p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3 shadow">
+<summary class="summary-title card-header bg-info text-white font-weight-bold">
+<span class="fa fa-exclamation-circle mr-1"></span> 安装 git<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><p class="card-text">地震“学”所有文档均使用 <a class="reference external" href="https://git-scm.com/">git</a> 进行版本控制。以下步骤假定用户已安装 git。若未安装，可以使用以下命令安装或更新 git：</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="f7fa9dd0-511e-4f5c-aaa7-ac1d129f84e0" name="810855ee-1a98-4368-98f1-dc765a4af912" type="radio">
+</input><label class="tabbed-label" for="f7fa9dd0-511e-4f5c-aaa7-ac1d129f84e0">
+Fedora</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo dnf install git
+</pre></div>
+</div>
+</div>
+<input id="40d40626-78ac-46be-b3c5-7c901aa7ae42" name="810855ee-1a98-4368-98f1-dc765a4af912" type="radio">
+</input><label class="tabbed-label" for="40d40626-78ac-46be-b3c5-7c901aa7ae42">
+CentOS</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo yum install git
+</pre></div>
+</div>
+</div>
+<input id="4021ba29-7d22-4124-b8d4-92fe0bb90482" name="810855ee-1a98-4368-98f1-dc765a4af912" type="radio">
+</input><label class="tabbed-label" for="4021ba29-7d22-4124-b8d4-92fe0bb90482">
+Ubuntu/Debian</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt install git
+</pre></div>
+</div>
+</div>
+<input id="cce5ecb6-94ae-4884-aedf-12c5ce5e6a66" name="810855ee-1a98-4368-98f1-dc765a4af912" type="radio">
+</input><label class="tabbed-label" for="cce5ecb6-94ae-4884-aedf-12c5ce5e6a66">
+macOS</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ brew install git
+</pre></div>
+</div>
+</div>
+<input id="f57249c4-454b-499e-9fc4-b3dfdc6ed7a6" name="810855ee-1a98-4368-98f1-dc765a4af912" type="radio">
+</input><label class="tabbed-label" for="f57249c4-454b-499e-9fc4-b3dfdc6ed7a6">
+Windows</label><div class="tabbed-content docutils">
+<p class="card-text">打开 <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>，下载并安装 Git for Windows。</p>
+</div>
+</div>
+<p class="card-text">安装完成后，还需设置个人信息。打开终端，运行以下命令（将 “seismo-learn” 和 “<a class="reference external" href="mailto:seismo-learn&#37;&#52;&#48;gmail&#46;com">seismo-learn<span>&#64;</span>gmail<span>&#46;</span>com</a>” 替换成个人对应的信息）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 设置用户姓名和邮箱
+$ git config --global user.name &quot;seismo-learn&quot;
+$ git config --global user.email &quot;seismo-learn@gmail.com&quot;
+
+# 查看 ~/.gitconfig
+$ cat ~/.gitconfig
+[user]
+       name = seismo-learn
+       email = seismo-learn@gmail.com
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3 shadow">
+<summary class="summary-title card-header bg-info text-white font-weight-bold">
+<span class="fa fa-exclamation-circle mr-1"></span> git 和 GitHub 学习资料<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">以下修改文档并提交的步骤中使用了 git 的一些常用选项，可以参考以下资料学习更多用法：</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="http://rogerdudler.github.io/git-guide/index.zh.html">git 简明指南</a></p></li>
+<li><p class="card-text"><a class="reference external" href="http://www.worldhello.net/gotgithub/index.html">GotGitHub</a></p></li>
+<li><p class="card-text"><a class="reference external" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">廖雪峰的 Git 教程</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://git-scm.com/book/zh/">Pro Git</a></p></li>
+</ul>
+<p class="card-text">GitHub 相关资料：</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://docs.github.com/cn/github">GitHub 中文文档</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://guides.github.com/introduction/flow/">Understanding the GitHub flow</a></p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3 shadow">
+<summary class="summary-title card-header bg-info text-white font-weight-bold">
+<span class="fa fa-exclamation-circle mr-1"></span> 安装 Python、Sphinx 以及文档所需依赖包<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><p class="card-text">地震“学”的所有文档均使用文档生成工具 <a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a>
+构建。因此，若想要在本地构建文档并检查修改效果，需要安装 Python、Sphinx 以及文档所需依赖包：</p>
+<ul class="simple">
+<li><p class="card-text">建议通过 <a class="reference external" href="https://seismo-learn.org/software/anaconda/" title="(在 地震“学”软件)"><span class="xref std std-doc">Anaconda</span></a> 来安装和管理 Python。强烈建议不要使用系统自带的 Python。</p></li>
+<li><p class="card-text">参考<a class="reference internal" href="../building/"><span class="doc">构建网站</span></a>，安装 Sphinx 和文档所需依赖包。</p></li>
+</ul>
+</div></blockquote>
+</div>
+</details><div class="section" id="id4">
+<h3>克隆和复制仓库<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>以下步骤假定读者的 GitHub 用户名为 <code class="docutils literal notranslate"><span class="pre">seismology-freshman</span></code>。</p>
+<p>以下步骤以<a class="reference external" href="https://seismo-learn.org/seismology101/">地震“学”科研入门教程</a>为例，修改其他文档时做简单替换即可：</p>
+<ul class="simple">
+<li><p>修改文档<a class="reference external" href="https://seismo-learn.org/software/">地震“学”软件</a>: 将 <code class="docutils literal notranslate"><span class="pre">seismology101</span></code> 改成 <code class="docutils literal notranslate"><span class="pre">software</span></code></p></li>
+<li><p>修改文档<a class="reference external" href="https://seismo-learn.org/seismology/">地震“学”参考书</a>: 将 <code class="docutils literal notranslate"><span class="pre">seismology101</span></code> 改成 <code class="docutils literal notranslate"><span class="pre">seismology</span></code></p></li>
+</ul>
+</div>
+<ol class="arabic">
+<li><p>复制仓库至个人 GitHub 帐号</p>
+<p>点击项目主页 <a class="reference external" href="https://github.com/seismo-learn/seismology101">https://github.com/seismo-learn/seismology101</a> 右上角的 Fork 按钮，将该项目复制到个人 GitHub 账户下。复制完成后，个人 GitHub 帐号下便有了 <a class="reference external" href="https://github.com/seismology-freshman/seismology101">https://github.com/seismology-freshman/seismology101</a> 仓库。</p>
+</li>
+<li><p>克隆个人 GitHub 帐号下的复制仓库到本地计算机（复制仓库默认是本地克隆仓库的远程 origin）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 进入 ~/Downloads 目录，也可以选择其他目录存放文档源码
+$ cd ~/Downloads
+
+# 克隆仓库
+$ git clone git@github.com:seismology-freshman/seismology101.git
+</pre></div>
+</div>
+</li>
+<li><p>添加官方仓库作为本地克隆仓库的另一个远程，并命名为 upstream:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 进入 ~/Downloads/seismology101 目录
+$ cd ~/Downloads/seismology101/
+
+# 添加官方仓库作为另一个远程 upstream
+$ git remote add upstream git@github.com:seismo-learn/seismology101.git
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>上述三个步骤只需在第一次修改代码时执行一次。一旦复制或克隆某仓库后，就无需再次复制或克隆。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>修改文档<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<ol class="arabic">
+<li><p>在本地创建并切换至新分支，假定新分支名为 <code class="docutils literal notranslate"><span class="pre">pr-workflow</span></code>（分支名需简短、描述性且独特）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 若不在 main 分支，需先切换至该分支
+$ git checkout main
+
+# 创建并切换至 pr-workflow 分支
+$ git checkout -b pr-workflow
+</pre></div>
+</div>
+</li>
+<li><p>在新建分支中对文档做修改，并提交 commit（此过程可以循环多次）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 查看仓库当前的状态
+$ git status
+# 添加所有修改
+$ git add --all
+
+# 查看仓库当前的状态
+$ git status
+# 提交添加的修改
+$ git commit -m &quot;此处填写本次提交的注释信息&quot;
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>切忌不要直接在 main 分支中进行修改和提交</p>
+</div>
+</li>
+<li><p>修改过程中，可以随时在本地构建文档并检查修改效果</p>
+<p>使用以下命令构建文档，生成的文档位于本地仓库的 <code class="file docutils literal notranslate"><span class="pre">build/html/</span></code> 目录下，直接用浏览器打开
+<code class="file docutils literal notranslate"><span class="pre">build/html/index.html</span></code> 即可预览:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 进入仓库主目录
+$ cd ~/Downloads/seismology101/
+
+# 编译生成 HTML 格式的文档
+$ make html
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>开发 pr-workflow 分支的过程中，官方 main 分支可能已经更新。可以经常同步最新版的官方
+main 分支，也可以定期同步。</p>
+<ol class="arabic">
+<li><p>同步本地和官方 main 分支:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 切换到 main 分支
+$ git checkout main
+
+# 获取官方 main 分支，并合并到本地 main 分支
+$ git pull upstream main
+</pre></div>
+</div>
+</li>
+<li><p>更新个人 GitHub 帐号下的复制仓库 main 分支:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push origin main
+</pre></div>
+</div>
+</li>
+</ol>
+<p>提交 PR 后，一般会收到评论和修改建议，有些修改建议可能直接在远程（origin）pr-worflow
+分支中就接收了。有时，还会在 PR 中选择同步最新版的官方 main 分支到远程的 pr-worflow
+分支。这两种情况下，我们都需要同步修改过的远程 pr-worflow 分支和本地 pr-worflow 分支:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 切换到 pr-workflow 分支
+$ git checkout pr-workflow
+
+# 获取远程 pr-workflow 分支，并合并到本地 pr-workflow 分支
+$ git pull origin pr-workflow
+</pre></div>
+</div>
+<p>本地 main 分支和 pr-worflow 分支一般不需要同步。如果确实需要同步时，请确保自己有足够的能力和精力解决可能的冲突。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>有时候，我们需要复制一些 commit 到某分支，推荐使用 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cherry-pick</span></code> 命令。可以参考 <a class="reference external" href="https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html">git cherry-pick 教程</a>
+学习其基本用法。</p>
+<p>除了 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span></code> 命令外，<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span></code> 命令也可以用来整合来自不同分支的修改，它比 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">cherry-pick</span></code> 命令更强大。但是变基（rebase）会修改提交历史，因此你首先需要了解该命令的详细用法，知道自己在做啥。可以参考<a class="reference external" href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%8F%98%E5%9F%BA">变基</a>
+学习其基本用法。总的原则是，<strong>只对尚未推送给别人的本地修改执行变基操作清理历史，从不对
+已推送至别处的提交执行变基操作</strong>。</p>
+</div>
+</div>
+<div class="section" id="pr">
+<h3>提交 PR<a class="headerlink" href="#pr" title="永久链接至标题">¶</a></h3>
+<ol class="arabic">
+<li><p>推送 pr-workflow 分支至个人 GitHub 帐号下的复制仓库:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push origin pr-workflow
+</pre></div>
+</div>
+</li>
+<li><p>提交 PR</p>
+<p>进入个人 GitHub 帐号下的复制仓库（即 <a class="reference external" href="https://github.com/seismology-freshman/seismology101">https://github.com/seismology-freshman/seismology101</a>）。一般 GitHub 会自动提示有可提交的 PR，点击 “Compare &amp; pull request”，输入此 PR 的标题和具体描述，最后点击 “Create pull request” 即可。</p>
+</li>
+<li><p>审核、评论以及修改 PR</p>
+<p>地震“学”维护者收到 PR 后，会对代码进行审核、评论以及修改，并决定是否接受或结束该 PR。</p>
+<p>提交的 PR 在接收前可能需要读者多次修改。这种情况并不要创建新 PR，只需继续本地 pr-workflow 分支中修改并提交，然后再次推送 pr-workflow 分支至远程 origin 即可，修改将自动添加到已提交的 PR 中。推送新的修改后，可以选择在该 PR 中留言，以通知维护者已提交新的修改。</p>
+</li>
+<li><p>PR 被接受并合并至官方 main 分支后，则可以更新 main 分支，并删除 pr-workflow 分支</p>
+<p>更新本地和个人 GitHub 中的 main 分支:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 切换回本地 main 分支
+$ git checkout main
+
+# 获取官方 main 分支，并合并到本地 main 分支
+$ git pull upstream main
+
+# 更新个人 GitHub 中的 main 分支
+$ git push origin main
+</pre></div>
+</div>
+<p>删除本地和个人 GitHub 中的 pr-workflow 分支:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 删除本地 pr-workflow 分支
+$ git branch -D pr-workflow
+
+# 删除个人 GitHub 上的远程 pr-workflow 分支，也可以在 GitHub 上点击按钮删除分支
+$ git push origin :pr-workflow
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../restructuredtext/" class="btn btn-neutral float-right" title="reStructuredText 备忘单" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../building/" class="btn btn-neutral float-left" title="构建网站" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020–2021, seismo-learn.
+      <span class="lastupdated">
+        最后更新于 2021 年 03 月 09 日.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

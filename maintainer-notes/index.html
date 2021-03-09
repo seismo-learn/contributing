@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>维护者备忘单 &mdash; 地震“学”贡献指南</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="仓库列表" href="../repositories/" />
+    <link rel="prev" title="Sphinx 扩展" href="../sphinx-extensions/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> 地震“学”贡献指南
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../general-guidelines/">维护指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../building/">构建网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pull-request/">Pull Request 流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../restructuredtext/">reStructuredText 备忘单</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx-extensions/">Sphinx 扩展</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">维护者备忘单</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">新建文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">GitHub 仓库设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">命令行工具</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../repositories/">仓库列表</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">外部链接</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://seismo-learn.org/"><i class="fa fa-home"></i> 地震“学”主站</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/contributing"><i class="fa fa-github fa-fw"></i> 网站源码</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/seismo-learn/contributing/discussions"><i class="fa fa-comments fa-fw"></i> 参与讨论</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">地震“学”贡献指南</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>维护者备忘单</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            
+              <a href="https://github.com/seismo-learn/contributing/blob/main/source/maintainer-notes.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>维护者备忘单<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>以下总结地震“学”维护者的部分注意事项。</p>
+<div class="section" id="id2">
+<h2>新建文档<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>新建文档时，可以直接复制已存在文档的配置和相关目录及文件（如<a class="reference external" href="https://github.com/seismo-learn/seismology101">地震“学”科研入门教程</a>），并做进一步修改。例如，<code class="file docutils literal notranslate"><span class="pre">Makefile</span></code>、<code class="file docutils literal notranslate"><span class="pre">make.bat</span></code>、
+<code class="file docutils literal notranslate"><span class="pre">requirements.txt</span></code>、<code class="file docutils literal notranslate"><span class="pre">source/conf.py</span></code>、<code class="file docutils literal notranslate"><span class="pre">source/_static/</span></code>、
+<code class="file docutils literal notranslate"><span class="pre">source/_templates/</span></code>、<code class="file docutils literal notranslate"><span class="pre">source/index.rst</span></code>、<code class="file docutils literal notranslate"><span class="pre">.gitignore</span></code>、
+<code class="file docutils literal notranslate"><span class="pre">.github/</span></code>、<code class="file docutils literal notranslate"><span class="pre">README.md</span></code> 等。</p>
+<p>也可以使用 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> 命令新建文档，再参考已存在文档进行配置。简要介绍该命令的一些常见选项:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 新建文档
+$ sphinx-quickstart
+...
+&gt; Separate source and build directories (y/n) [n]: y
+&gt; Author name(s): seismo-learn
+&gt; Project release []:
+&gt; Project language [en]: zh_CN
+
+# 查看新建文档
+$ ls
+build  make.bat  Makefile  source
+$ ls source
+conf.py  index.rst  _static  _templates
+</pre></div>
+</div>
+</div>
+<div class="section" id="github">
+<h2>GitHub 仓库设置<a class="headerlink" href="#github" title="永久链接至标题">¶</a></h2>
+<p>地震“学”所有文档源码托管在 <a class="reference external" href="https://github.com/seismo-learn">GitHub</a> 上。我们一般对 GitHub 上托管的文档仓库做一定设置。可以参考已存在的仓库进行配置，如<a class="reference external" href="https://github.com/seismo-learn/seismology101">地震“学”科研入门教程</a>。</p>
+<p>在 “Settings” 的 “Options” 选项中：</p>
+<ul class="simple">
+<li><p>“Features” 不使用 Wikis、Projects、Sponsorships</p></li>
+<li><p>“Merge button” 选择 Allow squash merging、Allow auto-merge、Automatically delete head branches</p></li>
+<li><p>“GitHub Pages” 的 Source 选择 gh-pages 分支，并勾选 Enforce HTTPS</p></li>
+</ul>
+<p>在 “Settings” 的 “Branches” 选项中，设置 main 分支的保护规则。</p>
+<p>在 “Settings” 的 “Secrets” 选项中，设置 Organization secrets。</p>
+</div>
+<div class="section" id="id3">
+<h2>命令行工具<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>我们使用 git 进行版本控制，一些编辑器或 IDE 也集成了 git。此外，也可以使用一些高效的命令行工具。</p>
+<p><a class="reference external" href="https://cli.github.com/">GitHub CLI</a> 是 GitHub 官方命令行工具，可以在终端中处理
+Pull Request、Issue 等，例如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># 提交 Pull Request
+$ gh pr create
+
+# 提交 Pull Request，并申请 Reviewers
+$ gh pr create -r core-man,seisman
+</pre></div>
+</div>
+<p><a class="reference external" href="https://hub.github.com/">hub</a> 是 git 的一个扩展，常用于同步本地和远程分支:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ hub sync
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../repositories/" class="btn btn-neutral float-right" title="仓库列表" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../sphinx-extensions/" class="btn btn-neutral float-left" title="Sphinx 扩展" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020–2021, seismo-learn.
+      <span class="lastupdated">
+        最后更新于 2021 年 03 月 09 日.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
