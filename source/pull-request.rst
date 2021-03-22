@@ -11,8 +11,9 @@ Pull Request 流程
 
 .. note::
 
-   若不熟悉编写文档使用的 reStructuredText 标记语言和 Sphinx 扩展，可以参考 :doc:`restructuredtext`
-   和 :doc:`sphinx-extensions`\ 。
+   - 若不熟悉 reStructuredText 标记语言和 Sphinx 扩展，可以参考 :doc:`restructuredtext`
+     和 :doc:`sphinx-extensions`\ 。
+   - 若不熟悉 Markdown 标记语言，可以参考 :doc:`Markdown 教程 <seis101:programming/markdown>`\ 。
 
 .. note::
 

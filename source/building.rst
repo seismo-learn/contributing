@@ -1,7 +1,10 @@
 构建网站
 ========
 
-地震“学”的网站使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__ 构建。
+Sphinx 构建网站
+---------------
+
+地震“学”所有教程网站都使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__ 构建。
 读者可以按照如下步骤在自己的计算机上构建网站。
 
 .. dropdown:: :fa:`exclamation-circle,mr-1` 安装 git 和 Python
@@ -59,3 +62,13 @@
 
 5.  生成的文档位于 :file:`build/html/` 目录下，可以直接用浏览器打开
     :file:`build/html/index.html` 即可在本地预览。
+
+
+Hugo 构建网站
+-------------
+
+`地震学主站 <https://seismo-learn.org/>`__\ 和\ `地震“学”链接 <https://seismo-learn.org/links/>`__\
+是由静态网站生成器 `Hugo <https://gohugo.io/>`__ 构建生成的，具体构建方法请参考他们
+源码网址里的 :file:`README.md` 文件。此外，`地震“学”链接 <https://seismo-learn.org/links/>`__\
+使用的主题是我们基于 `Bootstrap <https://getbootstrap.com/>`__ 框架和 `Font Awesome <https://fontawesome.com/>`__
+精美图标自定义的。
