@@ -10,6 +10,7 @@
 - `地震“学”软件 <https://github.com/seismo-learn/software>`__
 - `地震“学”参考书 <https://github.com/seismo-learn/seismology>`__
 - `地震“学”贡献指南 <https://github.com/seismo-learn/contributing>`__
+- `地震“学”链接 <https://seismo-learn.org/links/>`__
 
 主站
 -----

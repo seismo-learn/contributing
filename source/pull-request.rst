@@ -11,8 +11,9 @@ Pull Request 流程
 
 .. note::
 
-   若不熟悉编写文档使用的 reStructuredText 标记语言和 Sphinx 扩展，可以参考 :doc:`restructuredtext`
-   和 :doc:`sphinx-extensions`\ 。
+   - 若不熟悉 reStructuredText 标记语言和 Sphinx 扩展，可以参考 :doc:`restructuredtext`
+     和 :doc:`sphinx-extensions`\ 。
+   - 若不熟悉 Markdown 标记语言，可以参考 :doc:`Markdown 教程 <seis101:programming/markdown>`\ 。
 
 .. note::
 
@@ -88,9 +89,9 @@ Pull Request 流程
 
 .. dropdown:: :fa:`exclamation-circle,mr-1` 安装 Python、Sphinx 以及文档所需依赖包
    :container: + shadow
-   :title: bg-info text-white font-weight-bold 
+   :title: bg-info text-white font-weight-bold
 
-    地震“学”的所有文档均使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__
+    地震“学”的所有教程文档均使用文档生成工具 `Sphinx <http://www.sphinx-doc.org/>`__
     构建。因此，若想要在本地构建文档并检查修改效果，需要安装 Python、Sphinx 以及文档
     所需依赖包：
 
@@ -164,7 +165,7 @@ Pull Request 流程
 
 3.  修改过程中，可以随时在本地构建文档并检查修改效果
 
-    使用以下命令构建文档，生成的文档位于本地仓库的 :file:`build/html/` 目录下，直接用浏览器打开
+    使用以下命令构建教程文档，生成的文档位于本地仓库的 :file:`build/html/` 目录下，直接用浏览器打开
     :file:`build/html/index.html` 即可预览::
 
         # 进入仓库主目录
