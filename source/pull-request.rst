@@ -78,8 +78,9 @@ Pull Request 流程
    以下修改文档并提交的步骤中使用了 git 的一些常用选项，可以参考以下资料学习更多用法：
 
    - `git 简明指南 <http://rogerdudler.github.io/git-guide/index.zh.html>`__
-   - `GotGitHub <http://www.worldhello.net/gotgithub/index.html>`__
    - `廖雪峰的 Git 教程 <http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000>`__
+   - `GotGitHub <http://www.worldhello.net/gotgithub/index.html>`__
+   - `How to Use Git and Git Workflows – a Practical Guide <https://www.freecodecamp.org/news/practical-git-and-git-workflows/amp/>`__
    - `Pro Git <https://git-scm.com/book/zh/>`__
 
    GitHub 相关资料：
