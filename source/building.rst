@@ -19,14 +19,6 @@ Sphinx 构建网站
 
     若未安装 Python，建议通过 :doc:`Anaconda <software:anaconda/index>`  来安装和管理 Python。
 
-.. dropdown:: :fa:`exclamation-circle,mr-1` 安装 Sphinx
-   :container: + shadow
-   :title: bg-info text-white font-weight-bold
-
-   可以使用 Python 自带的工具 pip 来安装 Sphinx::
-   
-       $ pip install sphinx
-
 .. note::
 
     以下步骤以\ `地震“学”科研入门教程 <https://seismo-learn.org/seismology101/>`__\ 为例。
