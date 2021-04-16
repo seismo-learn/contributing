@@ -37,14 +37,7 @@ Sphinx 构建网站
         # 克隆源码
         $ git clone --depth=50 https://github.com/seismo-learn/seismology101.git
 
-2.  安装 Sphinx
-
-    ::
-
-        # 可以使用 Python 自带的工具 pip 来安装 Sphinx
-        $ pip install sphinx
-
-3.  安装文档所需依赖
+2.  安装 Sphinx 等文档所需依赖
 
     ::
 
@@ -54,13 +47,13 @@ Sphinx 构建网站
         # 安装依赖
         $ pip install -r requirements.txt
 
-4.  编译生成 HTML 格式的文档
+3.  编译生成 HTML 格式的文档
 
     ::
 
         $ make html
 
-5.  生成的文档位于 :file:`build/html/` 目录下，可以直接用浏览器打开
+4.  生成的文档位于 :file:`build/html/` 目录下，可以直接用浏览器打开
     :file:`build/html/index.html` 即可在本地预览。
 
 
