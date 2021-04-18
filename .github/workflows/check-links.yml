@@ -34,6 +34,7 @@ jobs:
           --exclude ".*/n$"
           --exclude ".*/n#$"
           --exclude "^https://git-scm.com/downloads/u%7Bff0c%7D/u%7B4e0b%7D/u%7B8f7d%7D/u%7B5e76%7D/u%7B5b89%7D/u%7B88c5%7D$"
+          --exclude "^https://git-scm.com/downloads%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85$"
           --exclude "^https://seismo-learn.org/seismology101/n/n/n/u%7B5e26%7D/u%7B8d85%7D/u%7B94fe%7D/u%7B63a5%7D/u%7B7684%7D/u%7B6587%7D/u%7B5b57%7D/u%7Bff1a%7D$"
           --exclude "https://github.com/seismology-freshman/seismology101"
           --exclude "https://github.com/seismology-freshman/seismology101.git"
