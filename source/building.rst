@@ -53,7 +53,7 @@ Sphinx 构建网站
 
         $ make html
 
-4.  生成的文档位于 :file:`build/html/` 目录下，可以直接用浏览器打开
+4.  生成的文档位于 :file:`build/html/` 目录下，直接用浏览器打开
     :file:`build/html/index.html` 即可在本地预览。
 
 
