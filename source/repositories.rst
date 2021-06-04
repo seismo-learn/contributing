@@ -12,6 +12,11 @@
 - `地震“学”贡献指南 <https://github.com/seismo-learn/contributing>`__
 - `地震“学”链接 <https://seismo-learn.org/links/>`__
 
+代码
+----
+
+- `SOD 脚本 <https://github.com/seismo-learn/SOD-recipes>`__
+
 主站
 -----
 
