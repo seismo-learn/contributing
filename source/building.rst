@@ -31,20 +31,14 @@ Sphinx 构建网站
 
     ::
 
-        # 假设将源码下载到 ~/Downloads/ 目录下，切换至该目录
-        $ cd ~/Downloads/
-
-        # 克隆源码
+        # 克隆源码，并进入源码目录
         $ git clone --depth=50 https://github.com/seismo-learn/seismology101.git
+        $ cd seismology101
 
 2.  安装 Sphinx 等文档所需依赖
 
     ::
 
-        # 进入下载的源码目录
-        $ cd ~/Downloads/seismology101/
-
-        # 安装依赖
         $ pip install -r requirements.txt
 
 3.  编译生成 HTML 格式的文档
