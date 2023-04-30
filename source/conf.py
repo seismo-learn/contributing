@@ -107,7 +107,7 @@ html_context = {
         ),
         (
             '<i class="fa fa-comments fa-fw"></i> 参与讨论',
-            f"{github_url}/discussions",
+            "https://github.com/orgs/seismo-learn/discussions",
         ),
     ],
 }
