@@ -1,15 +1,16 @@
 # 地震“学”贡献指南
 
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](https://seismo-learn.org/contributing/)
 [![Deploy](https://github.com/seismo-learn/contributing/actions/workflows/deploy.yml/badge.svg)](https://github.com/seismo-learn/contributing/actions/workflows/deploy.yml)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc/4.0/deed.zh)
 
 
 本指南主要为了方便读者向地震“学”提供反馈和贡献。
 
-- 项目主页：https://github.com/seismo-learn/contributing
-- 网页版：https://seismo-learn.org/contributing/
+- 主页：https://seismo-learn.org/contributing/
+- 源码：https://github.com/seismo-learn/contributing
 
-## 构建文档
+## 文档维护
 
 本文档尚有很多不完善之处，欢迎读者参与到文档的维护与更新中。
 详情见[贡献指南](https://seismo-learn.org/contributing/)。
