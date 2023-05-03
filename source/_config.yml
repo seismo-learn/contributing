@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/en/stable/customize/config.html
 
 # Book settings
-title: "地震“学”科研入门教程"
+title: "地震“学”贡献指南"
 author: seismo-learn
 copyright : "2020–2023"
 
@@ -33,13 +33,9 @@ html:
 
 # Repository settings
 repository:
-  url: https://github.com/seismo-learn/seismology101
+  url: https://github.com/seismo-learn/contributing
   path_to_book: source
   branch: main
-
-# Citation settings
-bibtex_bibfiles:
-  - references.bib
 
 # Advanced sphinx settings
 sphinx:
@@ -48,5 +44,3 @@ sphinx:
     copybutton_prompt_is_regexp: true
     copybutton_only_copy_prompt_lines: true
     copybutton_remove_prompts: true
-    bibtex_default_style: plain
-    bibtex_reference_style: super
