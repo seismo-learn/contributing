@@ -1,0 +1,52 @@
+# JupyterBook settings
+# Learn more at https://jupyterbook.org/en/stable/customize/config.html
+
+# Book settings
+title: "地震“学”科研入门教程"
+author: seismo-learn
+copyright : "2020–2023"
+
+# Execution settings
+execute:
+  execute_notebooks: auto
+  timeout: 300
+
+# Parse and render settings
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - dollarmath
+    - linkify
+    - substitution
+    - tasklist
+  myst_substitutions:
+    田冬冬: "[田冬冬](https://me.seisman.info/)"
+    姚家园: "[姚家园](https://github.com/core-man)"
+
+# HTML-specific settings
+html:
+  favicon: favicon.ico
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+
+# Repository settings
+repository:
+  url: https://github.com/seismo-learn/seismology101
+  path_to_book: source
+  branch: main
+
+# Citation settings
+bibtex_bibfiles:
+  - references.bib
+
+# Advanced sphinx settings
+sphinx:
+  config:
+    copybutton_prompt_text: '>>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}:'
+    copybutton_prompt_is_regexp: true
+    copybutton_only_copy_prompt_lines: true
+    copybutton_remove_prompts: true
+    bibtex_default_style: plain
+    bibtex_reference_style: super

@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: 贡献者指南
+    chapters:
+    - file: general-guidelines
+    - file: building
+    - file: pull-request
+  - caption: 维护者指南
+    chapters:
+    - file: maintainer-notes
+    - file: repositories
