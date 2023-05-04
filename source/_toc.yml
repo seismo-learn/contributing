@@ -13,3 +13,9 @@ parts:
     chapters:
     - file: maintainer-notes
     - file: repositories
+  - caption: 外部链接
+    chapters:
+    - url: https://seismo-learn.org/
+      title: 地震“学”主站
+    - url: https://github.com/orgs/seismo-learn/discussions
+      title: 参与讨论
