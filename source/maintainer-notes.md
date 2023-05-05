@@ -2,33 +2,6 @@
 
 以下总结地震“学”维护者的部分注意事项。
 
-## 新建 Sphinx 文档
-
-新建文档时，可以直接复制已存在文档的配置和相关目录及文件（如[地震“学”科研入门教程](https://github.com/seismo-learn/seismology101)），
-并做进一步修改。例如，{file}`Makefile`、{file}`make.bat`、
-{file}`requirements.txt`、{file}`source/conf.py`、{file}`source/_static/`、
-{file}`source/_templates/`、{file}`source/index.rst`、{file}`.gitignore`、
-{file}`.github/`、{file}`README.md` 等。
-
-也可以使用 `sphinx-quickstart` 命令新建文档，再参考已存在文档进行配置。简要介绍该命令
-的一些常见选项:
-
-```
-# 新建文档
-$ sphinx-quickstart
-...
-> Separate source and build directories (y/n) [n]: y
-> Author name(s): seismo-learn
-> Project release []:
-> Project language [en]: zh_CN
-
-# 查看新建文档
-$ ls
-build  make.bat  Makefile  source
-$ ls source
-conf.py  index.rst  _static  _templates
-```
-
 ## GitHub 仓库设置
 
 地震“学”所有文档源码托管在 [GitHub](https://github.com/seismo-learn) 上。

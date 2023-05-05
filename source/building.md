@@ -1,8 +1,8 @@
 # 构建网站
 
-## Sphinx 构建网站
+## Jupyter Book 构建网站
 
-地震“学”所有教程网站都使用文档生成工具 [Sphinx](http://www.sphinx-doc.org/) 构建。
+地震“学”所有教程网站都使用文档生成工具 [Jupyter Book](https://jupyterbook.org/) 构建。
 读者可以按照如下步骤在自己的计算机上构建网站。
 
 ````{dropdown} 安装 git 和 Python
@@ -22,27 +22,25 @@
 :::
 
 1. 下载文档源码
-
    ```
    # 克隆源码，并进入源码目录
    $ git clone --depth=50 https://github.com/seismo-learn/seismology101.git
    $ cd seismology101
    ```
 
-2. 安装 Sphinx 等文档所需依赖
-
+2. 创建虚拟环境
    ```
-   $ pip install -r requirements.txt
+   $ conda env create -f environment.yml
    ```
 
 3. 编译生成 HTML 格式的文档
-
    ```
+   $ conda activate seismo-learn
    $ make html
    ```
 
-4. 生成的文档位于 {file}`build/html/` 目录下，直接用浏览器打开
-   {file}`build/html/index.html` 即可在本地预览。
+4. 生成的文档位于 {file}`_build/html/` 目录下，直接用浏览器打开
+   {file}`_build/html/index.html` 即可在本地预览。
 
 ## Hugo 构建网站
 
