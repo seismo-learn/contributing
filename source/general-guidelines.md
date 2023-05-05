@@ -8,7 +8,7 @@
 
 - 修正错别字、语句不通等
 - 修正文档中的错误或不清晰的描述
-- 修正 reStructuredText 或 Markdown 文件语法错误导致的显示问题
+- 修正 Markdown 文件语法错误导致的显示问题
 - 调整章节结构，使文档条理更清晰
 - 建议或者编写新章节或新文档
 
@@ -32,7 +32,7 @@ GitHub 上托管的文档仓库中存在如下长期分支：
 ### 文件命名
 
 每个源文件都会被转换成一个单独的网页。因而，确定文件名时应慎重，一旦确定，尽量不要再改动。
-由于 Windows 不区分文件名大小写，故而 {file}`option-B.rst` 和 {file}`option-b.rst`
+由于 Windows 不区分文件名大小写，故而 {file}`option-B.md` 和 {file}`option-b.md`
 在 Windows 下会出现冲突。我们使用的文件的命名规则是：
 
 - 文件名一律采用小写字母
@@ -41,11 +41,7 @@ GitHub 上托管的文档仓库中存在如下长期分支：
 
 ### 文件风格
 
-1. 所有教程均采用 [reStructuredText](https://docutils.sourceforge.io/rst.html)
-   语言编写，可参考 {doc}`restructuredtext` 学习其常用语法。[地震学主站](https://seismo-learn.org/)和[地震“学”链接](https://seismo-learn.org/links/)使用 [Markdown](https://daringfireball.net/projects/markdown/)
-   语言编写，可参考 {doc}`Markdown 教程 <seis101:programming/markdown>` 学习其常用语法。
-2. reStructuredText 文档的一级标题、二级标题和三级标题，分别用 `=`、`-` 和 `^`
-   符号标识
+1. 所有教程均采用 Markdown  语言编写，可参考 {doc}`Markdown 教程 <seis101:programming/markdown>` 学习其常用语法。
 3. 所有 Bash 命令前应加上 Shell 提示符 `$` 以表示该命令为 Shell 命令
 4. 中文字符与英文字符和数字之间应加上空格，如 `中文 ABC 中文` 而非 `中文ABC中文`，
    `中文 123 中文` 而非 `中文123中文`

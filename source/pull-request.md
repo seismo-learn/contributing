@@ -9,9 +9,7 @@
 相关修改经过讨论确认需要执行后，可选择[线下修改并提交]。
 
 :::{note}
-- 若不熟悉 reStructuredText 标记语言和 Sphinx 扩展，可以参考 {doc}`restructuredtext`
-  和 {doc}`sphinx-extensions`。
-- 若不熟悉 Markdown 标记语言，可以参考 {doc}`Markdown 教程 <seis101:programming/markdown>`。
+若不熟悉 Markdown 标记语言，可以参考 {doc}`Markdown 教程 <seis101:programming/markdown>`。
 :::
 
 :::{note}
