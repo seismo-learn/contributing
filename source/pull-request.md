@@ -118,17 +118,6 @@ GitHub 相关资料：
 - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
 ```
 
-```{dropdown} 安装 Python、Sphinx 以及文档所需依赖包
-
-地震“学”的所有教程文档均使用文档生成工具 [Sphinx](http://www.sphinx-doc.org/)
-构建。因此，若想要在本地构建文档并检查修改效果，需要安装 Python、Sphinx 以及文档
-所需依赖包：
-
-- 建议通过 {doc}`Anaconda <software:anaconda/index>` 来安装和管理 Python。
-  强烈建议不要使用系统自带的 Python。
-- 参考 {doc}`building`，安装 Sphinx 和文档所需依赖包。
-```
-
 ### 克隆和复制仓库
 
 :::{note}
