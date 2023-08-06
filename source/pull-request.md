@@ -52,13 +52,13 @@
 
 若未设置 SSH 秘钥，则需要修改以下步骤中的远程仓库地址：
 
-- <mailto:git@github.com>:seismology-freshman/seismology101.git 替换为 <https://github.com/seismology-freshman/seismology101.git>
-- <mailto:git@github.com>:seismo-learn/seismology101.git 替换为 <https://github.com/seismo-learn/seismology101.git>
+- git@github.com:seismology-freshman/seismology101.git 替换为 https://github.com/seismology-freshman/seismology101.git
+- git@github.com:seismo-learn/seismology101.git 替换为 https://github.com/seismo-learn/seismology101.git
 :::
 
 ````{dropdown} 安装 git
 
-地震“学”所有文档均使用 `git <https://git-scm.com/>`__ 进行版本控制。以下步骤假定
+地震“学”所有文档均使用 [git](https://git-scm.com) 进行版本控制。以下步骤假定
 用户已安装 git。若未安装，可以使用以下命令安装或更新 git：
 
 ::::{tab-set}
@@ -82,7 +82,7 @@ $ brew install git
 :::
 
 :::{tab-item} Windows
-打开 https://git-scm.com/downloads\ ，下载并安装 Git for Windows。
+打开 [https://git-scm.com/downloads]，下载并安装 Git for Windows。
 :::
 
 ::::
